@@ -1,0 +1,13 @@
+@import "./globals/colors";
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $red;
+  color: $white;
+  min-height: 100vh;
+  img {
+    display: block;
+  }
+}
