@@ -1,4 +1,9 @@
 @import "./globals/colors";
+@import "./globals/fonts";
+
+* {
+  font-family: $lato;
+}
 
 body {
   display: flex;

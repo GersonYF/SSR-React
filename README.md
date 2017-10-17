@@ -8,10 +8,10 @@ For every starter proyect!
 * React ✅
 * SCSS ✅
 * Assets ✅
+* Bootstrap & UI Kit ✅
 
 ## TODO
 
-* Bootstrap & UI Kit
 * React Router
 * Redux
 * Immutable
