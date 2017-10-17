@@ -12,11 +12,18 @@ export class Hello extends Component {
     this.props.getPosts();
   }
   render() {
+    const { posts } = this.props;
     return (
       <div>
-        <Alert color="primary">Hello</Alert>
         <img src={archerImg} alt="Sterling Archer" />
-        <i className="material-icons">accessibility</i>
+        {posts.map(p => {
+          return (
+            <div key={p.get("id")}>
+              <i className="material-icons">link</i>
+              <span>{p.get("title").get("rendered")}</span>
+            </div>
+          );
+        })}
       </div>
     );
   }
