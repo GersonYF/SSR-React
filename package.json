@@ -6,6 +6,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
@@ -24,8 +25,16 @@
   },
   "dependencies": {
     "bootstrap": "4.0.0-beta",
+    "immutable": "^3.8.2",
+    "lodash": "^4.17.4",
+    "query-string": "^5.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "reactstrap": "^5.0.0-alpha.3"
+    "react-redux": "^5.0.6",
+    "reactstrap": "^5.0.0-alpha.3",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "xmlhttprequest": "^1.8.0"
   }
 }

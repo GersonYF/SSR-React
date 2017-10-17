@@ -1,7 +1,7 @@
-# basic-webpack
-Basic Webpack setup
+# SLSR React
+Serverless-Side Rendering React
 
-For every starter proyect!
+Work in progress!!!
 
 ## DONE
 
@@ -9,12 +9,13 @@ For every starter proyect!
 * SCSS ✅
 * Assets ✅
 * Bootstrap & UI Kit ✅
+* Redux ✅
 
 ## TODO
 
-* React Router
-* Redux
 * Immutable
+* React Router
 * SSR (Server-side)
+* Apollo Client
 * Serverless (Primary focus Server Side)
 * Dockerize it!
