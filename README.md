@@ -10,10 +10,10 @@ Work in progress!!!
 * Assets ✅
 * Bootstrap & UI Kit ✅
 * Redux ✅
+* Immutable ✅
 
 ## TODO
 
-* Immutable
 * React Router
 * SSR (Server-side)
 * Apollo Client
