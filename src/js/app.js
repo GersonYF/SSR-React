@@ -1,21 +1,23 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import { Alert } from "reactstrap";
+import { Provider } from "react-redux";
+import { configureStore } from "./utils/reduxInit";
+import { Map } from "immutable";
+import Hello from "./components/Hello";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "../style/app.scss";
-import archerImg from "../assets/imgs/sterlingarcher.jpg";
 
-export default class Hello extends Component {
+const store = configureStore({});
+
+export default class App extends Component {
   render() {
     return (
-      <div>
-        <Alert color="primary">Hello</Alert>
-        <img src={archerImg} alt="Sterling Archer" />
-        <i className="material-icons">accessibility</i>
-      </div>
+      <Provider store={store}>
+        <Hello />
+      </Provider>
     );
   }
 }
 
-render(<Hello />, document.getElementById("app"));
+render(<App />, document.getElementById("app"));
