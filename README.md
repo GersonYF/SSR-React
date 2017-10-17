@@ -3,10 +3,15 @@ Basic Webpack setup
 
 For every starter proyect!
 
+## DONE
+
+* React ✅
+* SCSS ✅
+* Assets ✅
+
 ## TODO
-* React
-* Bootstrap
-* SCSS
+
+* Bootstrap & UI Kit
 * React Router
 * Redux
 * Immutable
