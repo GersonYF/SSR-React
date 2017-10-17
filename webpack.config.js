@@ -1,10 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const paths = {
   DIST: path.resolve(__dirname, "dist"),
   SRC: path.resolve(__dirname, "src"),
-  JS: path.resolve(__dirname, "src/js")
+  JS: path.resolve(__dirname, "src/js"),
+  CSS: path.resolve(__dirname, "src/style")
 };
 
 module.exports = {
@@ -16,14 +18,27 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(paths.SRC, "index.html")
-    })
+    }),
+    new ExtractTextPlugin("style.bundle.css")
   ],
+  devtool: "source-map",
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ["babel-loader"]
+      },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          use: "css-loader!sass-loader",
+          fallback: "style-loader"
+        })
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: ["file-loader"]
       }
     ]
   },
