@@ -1,14 +1,18 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import { Alert } from "reactstrap";
+
+import "bootstrap/dist/css/bootstrap.css";
 import "../style/app.scss";
-import keenImage from "../assets/imgs/sterlingarcher.jpg";
+import archerImg from "../assets/imgs/sterlingarcher.jpg";
 
 export default class Hello extends Component {
   render() {
     return (
       <div>
-        Hello from react
-        <img src={keenImage} alt="Commander Keen" />
+        <Alert color="primary">Hello</Alert>
+        <img src={archerImg} alt="Sterling Archer" />
+        <i className="material-icons">accessibility</i>
       </div>
     );
   }
