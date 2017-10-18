@@ -5,14 +5,22 @@ import { ActionCreators } from "../actions";
 import { bindActionCreators } from "redux";
 import { Link } from "react-router-dom";
 
-import archerImg from "../../assets/imgs/sterlingarcher.jpg";
-
-export class Hello extends Component {
+export class Posts extends Component {
+  componentDidMount() {
+    this.props.getPosts();
+  }
   render() {
     const { posts } = this.props;
     return (
       <div>
-        <img src={archerImg} alt="Sterling Archer" />
+        {posts.map(p => {
+          return (
+            <div key={p.get("id")}>
+              <i className="material-icons">link</i>
+              <span>{p.get("title").get("rendered")}</span>
+            </div>
+          );
+        })}
       </div>
     );
   }
@@ -26,4 +34,4 @@ const mapDispatchToProps = dispatch => {
   return bindActionCreators(ActionCreators, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Hello);
+export default connect(mapStateToProps, mapDispatchToProps)(Posts);
