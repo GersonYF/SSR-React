@@ -15,6 +15,7 @@ Work in progress!!!
 
 ## TODO
 
+* Create WP Environment for API
 * SSR (Server-side)
 * Apollo Client
 * Serverless (Primary focus Server Side)
