@@ -11,10 +11,10 @@ Work in progress!!!
 * Bootstrap & UI Kit ✅
 * Redux ✅
 * Immutable ✅
+* React Router ✅
 
 ## TODO
 
-* React Router
 * SSR (Server-side)
 * Apollo Client
 * Serverless (Primary focus Server Side)
